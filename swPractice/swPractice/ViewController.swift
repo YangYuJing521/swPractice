@@ -13,10 +13,66 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         basicDataType()
-        
+        luojiFenzhi()
 
     }
-
+    
+    
+//逻辑分之
+    func luojiFenzhi(){
+        //if语句
+        let score = 92
+        if score<0 || score>100 {
+            print("不合理分数")
+        }else if score < 100{
+            print("正常分数")
+        }
+        
+        //三目运算
+        let m = 40
+        let n = 30
+        let result = m > n ? m : n
+        print(result)
+        
+        //guard  守卫
+        guard score > 60 else {
+            print("不及格")
+            return;
+        }
+        print("及格")
+        
+        //switch
+        //可以判断单个值及多个值，可以判断浮点型， 字符串， 区间
+        switch score {
+        case 0..<60:    //开区间
+            print("不及格")
+        case 60..<80:
+            print("及格")
+        case 80..<90:
+            print("良好")
+        case 90...100:   //闭区间 包括100
+            print("优秀")
+        default:
+            print("不合理分数")
+        }
+        
+        switch score {
+        case 70,80,90,100:   //多个值
+            print("卡在线上")
+        default:
+            print("没卡在线上")
+        }
+        
+        let str = "+"
+        var rs = 0
+        switch str {
+        case "+":        //判断字符串
+            rs = m + n
+        default:
+            print("不算了")
+        }
+        print(rs)
+    }
     
 //    定义变量与数据推导
     func basicDataType() {
