@@ -7,18 +7,37 @@
 //
 
 import UIKit
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        basicDataType()
-        luojiFenzhi()
-
+        
+        
     }
     
     
-//逻辑分之
+    
+    
+
+}
+
+extension ViewController{
+    
+    
+    
+    //for循环
+    func forXunHuan(){
+        for _ in 0..<10 {
+            print("hallo")
+        }
+        
+        var a = 10
+        while a==10 {
+            
+        }
+    }
+    
+    //逻辑分之
     func luojiFenzhi(){
         //if语句
         let score = 92
@@ -74,7 +93,7 @@ class ViewController: UIViewController {
         print(rs)
     }
     
-//    定义变量与数据推导
+    //    定义变量与数据推导
     func basicDataType() {
         //let修饰不可变常量和对像，存放在栈中，指向堆中的对象 是指向堆的指针，对象可变指针不可变
         let view:UIView = UIView()
@@ -89,7 +108,7 @@ class ViewController: UIViewController {
         let b = 5.5
         let result = Double(a) + b
         print(result);
-
+        
     }
 
 }
