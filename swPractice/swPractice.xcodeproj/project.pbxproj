@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		244420A8C52F0454736651EF /* Pods-swPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swPractice/Pods-swPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		4995DA7E20BFC99B00620BB0 /* swPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swPractice.entitlements; sourceTree = "<group>"; };
 		49CE480120B6B860009737DD /* swPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CE480420B6B860009737DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CE480620B6B860009737DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		49CE480320B6B860009737DD /* swPractice */ = {
 			isa = PBXGroup;
 			children = (
+				4995DA7E20BFC99B00620BB0 /* swPractice.entitlements */,
 				49CE480420B6B860009737DD /* AppDelegate.swift */,
 				49CE480620B6B860009737DD /* ViewController.swift */,
 				49CE480820B6B860009737DD /* Main.storyboard */,
@@ -219,6 +221,11 @@
 				TargetAttributes = {
 					49CE480020B6B860009737DD = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					49CE481420B6B864009737DD = {
 						CreatedOnToolsVersion = 9.3;
@@ -496,6 +503,7 @@
 			baseConfigurationReference = 244420A8C52F0454736651EF /* Pods-swPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swPractice/swPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56NGMCS5S7;
 				INFOPLIST_FILE = swPractice/Info.plist;
@@ -507,6 +515,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -515,6 +525,7 @@
 			baseConfigurationReference = EA83F5A1FC3203457B404CBF /* Pods-swPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = swPractice/swPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56NGMCS5S7;
 				INFOPLIST_FILE = swPractice/Info.plist;
@@ -526,6 +537,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
